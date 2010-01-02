@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# (C) 2010 Asheesh Laroia, find-out-of-date-wordpress@asheesh.org
+# Have at it. Re-use permitted under the WTFPL.
+
 set -e # explode on failure
 
 ## Strategy:
@@ -33,6 +36,7 @@ latest_version=$(python latest_version.py)
 
 TMPFILE=$(mktemp)
 
+# For each WordPress-like readme.html,
 for file in $(find_readme_html_files); do
     if looks_like_wordpress_readme_html "$file"; then
         write_report_line "$file" >> "$TMPFILE"
@@ -50,3 +54,8 @@ else
     cat "$TMPFILE"
     rm -f "$TMPFILE"
 fi
+
+# FIXME: Handle spaces in filenames better. Use locate --null, and do the
+# rest of this null-terminated.
+
+# FIXME: Provide a mechanism for white-listing paths.
