@@ -13,7 +13,7 @@ function find_readme_html_files() {
 }
 
 function looks_like_wordpress_readme_html() {
-    grep -qi <title>wordpress.*readme "$1"
+    grep -qi '<title>wordpress.*readme' "$1"
 }
 
 function grab_version_number() {
