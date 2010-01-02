@@ -1,0 +1,9 @@
+This is a quick hack to be run nightly on a shared hosting server.
+
+The idea is this: I have a bunch of users, and they keep installing
+WordPress blogs. But then some get broken into because they're not
+up to date.
+
+So now at least I can receive an email about vulnerable versions.
+
+-- Asheesh 2010-01-01.
