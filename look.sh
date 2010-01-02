@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 ## Strategy:
 
 # use "locate" to find readme.html files since WordPress bundles one
@@ -14,7 +14,10 @@ function find_readme_html_files() {
 function looks_like_wordpress_readme_html() {
     grep -qi wordpress.*readme "$1"
 }
-    
+
+
+   
+ 
 
 for file in $(find_readme_html_files); do
     if looks_like_wordpress_readme_html "$file"; then
