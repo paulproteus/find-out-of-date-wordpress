@@ -6,4 +6,13 @@ up to date.
 
 So now at least I can receive an email about vulnerable versions.
 
+== Requirements ==
+
+* dpkg, for dpkg --check-version
+* python and lxml.html
+
+== License ==
+
+WTFPL.
+
 -- Asheesh 2010-01-01.
