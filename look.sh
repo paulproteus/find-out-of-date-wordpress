@@ -9,7 +9,7 @@ set -e # explode on failure
 # If so, use a heuristic to get its version number
 
 function find_readme_html_files() {
-    locate readme.html
+    locate readme.html | grep -v [.]svn
 }
 
 function looks_like_wordpress_readme_html() {
