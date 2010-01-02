@@ -17,7 +17,7 @@ function looks_like_wordpress_readme_html() {
 }
 
 function grab_version_number() {
-    grep 'Version ' "$1" | sed 's/.*Version //'
+    grep 'Version ' "$1" | sed 's/.*Version //' | sed -r 's/(.*)[^0-9.]/$1/'
 }
 
 function write_report_line() {
