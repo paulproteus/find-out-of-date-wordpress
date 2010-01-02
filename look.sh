@@ -9,9 +9,7 @@ set -e # explode on failure
 # If so, use a heuristic to get its version number
 
 function find_readme_html_files() {
-#    locate readme.html
-    echo /home/skyfaller/web/wrongsideofdawn.com/wordpress/readme.html
-    echo /home/skyfaller/web/wrongsideofdawn.com/wordpress/license.txt
+    locate readme.html
 }
 
 function looks_like_wordpress_readme_html() {
